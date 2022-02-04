@@ -1,22 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
+
+
 *{
     margin: 0;
     padding:0;
     box-sizing: border-box;
+    font-family: Manrope, sans-serif;
 }
-.container{
-    width: 80%;
-    margin: 0 auto;
-}
+/*.container{*/
+/*    width: 80%;*/
+/*    margin: 0 auto;*/
+/*}*/
+
+/*NAVBAR*/
+
 header{
-    background-color: #191919;
-    position: absolute;
-    margin: 0 10%;
+    margin: 0 auto;
     width: 80%;
     display: flex;
+    flex-wrap:nowrap;
     justify-content: space-between;
+    align-content: center;
+    padding: 2% 0;
+    border-bottom: rgba(151, 151, 151, 20%) solid 1px;
 }
+
+.hamburger-icon{
+   align-self: center;
+    padding-right: 5%;
+    display: none;
+    cursor: pointer;
+}
+
 .website-logo{
     display:inline-block;
+    cursor: pointer;
 }
 
 .navbar{
@@ -25,25 +43,197 @@ header{
 }
 .navbar ul{
     list-style: none;
+    display: flex;
+    flex-flow: row nowrap;
 }
 
 .navbar li{
-    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 0 20px;
+    cursor: pointer;
+}
+.navbar li:hover{
+    color:#D87D4A;
 }
 
 .open-cart-modal-btn{
     background: none;
     border: none;
+    cursor: pointer;
+
 }
 
-.home-page-image-hero {
-    background-color: #191919; /*fills the whitespace to the left of the image*/
-    background-image: url("../assets/home/desktop/image-hero.jpg");
-    min-height: 770px;
-    max-font-size: 800px;
+@media (max-width: 65em) {
+.navbar{
+    display: none;
+}
+.hamburger-icon{
+ display: block;
+ padding-right: 10%;
+}
+.website-logo{
+margin-right: auto;
+}
+}
 
+@media (max-width: 660px)
+{
+    header{
+        width: 100%;
+        background-size: cover;
+        background-position: center center;
+    }
+    .header-hero-container{
+        width: 100%;
+    }
+    .hero-container{
+        width: 100%;
+    }
+}
+
+
+.header-hero-container{
+    background-color:#191919;
+
+}
+.hero-container{
+    width: 80%;
     margin: 0 auto;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position:center right;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.hero-image{
+    width: 50%;
+    min-width: 550px ;
+
+}
+
+.hero-product-details-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 22.5rem;
+    color:white;
+    z-index: 3;
+}
+
+
+.hero-new-product-label{
+    font-size:1rem;
+    font-weight:400;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color:white;
+    opacity: 0.5;
+    margin-bottom: 1.5rem;
+}
+.hero-product-name{
+    font-size: 3.5rem;
+    line-height: 3.6rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.hero-product-description{
+    font-weight: 500;
+    font-size: 0.9rem;
+    opacity: 75%;
+    line-height: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-see-product-btn{
+    background-color:#D87D4A;
+    border:none;
+    color:white;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding:1rem 2rem;
+    width:fit-content;
+
+}
+@media (max-width: 63em) {
+
+
+    .hero-container{
+        width: 100%;
+        height:60vh;
+        min-height: 46rem;
+        background-image: url("../assets/home/tablet/image-header.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        justify-content: center;
+        background-position: center center ;
+
+    }
+
+    .hero-new-product-label{
+        padding-top: 1rem;
+        text-align: center;
+    }
+    .hero-product-name{
+        text-align: center;
+    }
+
+    .hero-product-description{
+        text-align: center;
+        margin-bottom: 3rem;
+    }
+    .hero-image{
+        display: none;
+    }
+
+    .hero-see-product-btn{
+        align-self: center;
+    }
+
+}
+
+@media (max-width: 660px) {
+
+    .hero-container{
+        width: 100%;
+        background-image: url("../assets/home/mobile/image-header1.jpg");
+        background-size: contain;
+
+       height: auto;
+
+
+    }
+    .hero-new-product-label{
+
+    }
+
+    .hero-product-name{
+
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 390px) {
+    .header-hero-container{
+        background-color: red;
+        
+
+    }
+
+    .hero-container{
+        padding-top: 2px;
+        background-size: contain;
+        /*width: 100%;*/
+        /*background-size: cover;*/
+        /*background-position: center bottom;*/
+        /*height:45vh;*/
+        /*min-height: 30rem;*/
+    }
+    .hero-new-product-label{
+        padding-top: 5rem
+    }
+
 }
