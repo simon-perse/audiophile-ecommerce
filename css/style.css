@@ -63,6 +63,11 @@ header{
 }
 
 @media (max-width: 1200px) {
+    header{
+        left:5%;
+        right:5%
+    }
+
 .navbar{
     display: none;
 }
@@ -75,13 +80,6 @@ margin-right: auto;
 }
 }
 
-@media (max-width: 900px) {
-header{
-    left:10%;
-    right:10%
-}
-
-}
 
 
 @media (max-width: 600px) {
@@ -98,20 +96,24 @@ header{
 
 /*HERO CONTAINER*/
 .header-hero-container{
-    margin: 0;
+    position: relative;
+    margin-right: auto;
+    margin-left: auto;
     width: 100%;
-    padding-top: 50.625%;
+    max-width: 2000px;
+    padding-top:min(50.625%,1010px);  /* This sets the height for out background image*/
     background-image: url("../assets/home/desktop/image-hero.jpg");
     background-repeat: no-repeat;
     background-size: contain;
+    margin-bottom: 5em;
+    z-index: 0;
 }
 
-.header-hero-container{
-    margin: 0;
-    position: relative;
-    width: 100%;
-    padding-top:50.625%;  /* This sets the height for out background image*/
-    z-index: 0;
+.header-hero-background-ultrawide{
+
+background-color: #191919;
+
+
 
 }
 
@@ -301,14 +303,112 @@ header{
     }
 }
 
+/*CONTAINER FOR ALL CONTENT UNDER HEADER*/
+.container{
+    width: 80%;
+    margin:0 auto;
+    max-width: 1600px; /* 2000-20% (to align with, navbar&hero image) */
+}
+@media (max-width: 1200px) {
+    .container{
+        width: 90%;
+
+    }
+}
+@media (max-width: 600px) {
+    .container{
+        width: 96%;
+
+    }
+}
+/*PRODUCT CATEGORY SECTION*/
+.product-category-container{
+    display: flex;
+    justify-content: space-between;
+    height: 12rem;
+
+}
+.product-category-banner{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    width: 32%;
+    position:relative;
+
+    /*background-image: linear-gradient(#F1F1F1,#F1F1F1 100%);*/
+    /*!*background-size: 100% 10rem;*!*/
+    /*!*background-repeat: no-repeat;*!*/
+    /*!*background-position: center bottom;*!*/
+}
+
+.product-category-background{
+    position: absolute;
+    top:2rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #F1F1F1;
+    z-index: -1;
+    border-radius: 7px;
+}
+
+.headphones-banner-img{
+    /*width: 33%;*/
+    height: 7rem;
+    top:0;
+    /*width: 7rem;*/
+
+}
+
+.product-category{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.125rem;
+    margin-bottom: 5%;
+}
+
+.product-category-shop-label{
+    color:#000;
+    opacity: 50%;
+    text-decoration:none;
+    margin-bottom: 5%;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size:0.8125rem ;
+    /*overflow: hidden;*/
+    white-space: nowrap;
+}
+
+.product-category-arrow{
+    position: relative;
+    bottom:-0.075rem;
+    left: 0.05rem;
+    height: 1em;
+}
 
 
+@media (max-width: 1200px) {
+    .product-category-background{
+        top:3rem;
 
+    }
+}
+@media (max-width: 600px) {
 
+    .product-category-container{
+        flex-direction: column;
+        height: auto;
+    }
 
-
-
-
+    .product-category-banner{
+        width: 100%;
+    }
+    .product-category-background{
+        /*top:4rem;*/
+    }
+}
 
 
 
