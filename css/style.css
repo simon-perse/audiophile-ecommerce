@@ -321,11 +321,13 @@ background-color: #191919;
 
     }
 }
+
 /*PRODUCT CATEGORY SECTION*/
 .product-category-container{
     display: flex;
     justify-content: space-between;
     height: 12rem;
+    margin-bottom: 4rem;
 
 }
 .product-category-banner{
@@ -337,10 +339,6 @@ background-color: #191919;
     width: 32%;
     position:relative;
 
-    /*background-image: linear-gradient(#F1F1F1,#F1F1F1 100%);*/
-    /*!*background-size: 100% 10rem;*!*/
-    /*!*background-repeat: no-repeat;*!*/
-    /*!*background-position: center bottom;*!*/
 }
 
 .product-category-background{
@@ -410,9 +408,111 @@ background-color: #191919;
     }
 }
 
+/*ZX9 PRODUCT BANNER (HOME PAGE)*/
+.zx9-speaker-banner{
+    position: relative;
+
+    background-color:#D87D4A;
+    border-radius: 7px;
+    height:30rem;
+    background-image: url("../assets/home/desktop/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
+    background-repeat: no-repeat,no-repeat;
+    background-size: auto 80%,84%;
+    background-position: bottom -10%  left+15%, -100% 10%;
+    /*!*background:rgb(216, 125, 74) url("../assets/home/desktop/pattern-circles.svg") no-repeat scroll -100% 10% / 84%;*!  code from https://a331998513.github.io/audiophile-ecommerce-website/#/*/
+}
 
 
 
+.zx9-banner-img{
+    position: absolute;
+   height: 10px;
+    top:0;
+    bottom: 0;
+    /*height: auto;*/
+    width: auto;
+}
+
+.zx9-product-details-container{
+    position: absolute;
+    width: 20rem;
+    right: 10%;
+    top:20%;
+
+
+}
+
+.zx9-product-name{
+    font-size: 3.5rem;
+    line-height: 3.625rem;
+    text-transform: uppercase;
+    color: #FFF;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.zx9-product-description{
+    color: #FFF;
+    opacity: 75%;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    line-height: 1.5625rem;
+    margin-bottom: 2rem;
+}
+
+.zx9-see-product-btn{
+    background-color:#000;
+    border: none;
+    padding: 0.7rem 1.2rem;
+    padding: 0.7rem 1.2rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: #FFF;
+}
+
+@media (max-width: 1200px) {
+    .zx9-speaker-banner{
+
+        background-image: url("../assets/home/tablet/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
+        background-size: auto 15rem,50rem;
+        background-position:  50% 1rem, 50% -16rem;
+        height: 40rem;
+    }
 
 
 
+    .zx9-product-details-container{
+        top:unset;
+        left:0;
+        right: 0;
+        margin:0 auto;
+        bottom:5%;
+        text-align: center;
+    }
+    .zx9-see-product-btn{
+        padding: 1rem 2.4rem;
+    }
+}
+@media (max-width: 600px) {
+    .zx9-speaker-banner{
+
+        background-image: url("../assets/home/mobile/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
+        background-size: auto 10rem,40rem;
+        background-position:  50% 6rem, 50% -8.5rem;
+        height: 40rem;
+    }
+
+    .zx9-product-name{
+        font-size: 2.25rem;
+        width: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .zx9-product-description{
+        font-size: 0.9375rem;
+        width: 17rem;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+}
