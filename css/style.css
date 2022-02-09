@@ -411,15 +411,17 @@ background-color: #191919;
 /*ZX9 PRODUCT BANNER (HOME PAGE)*/
 .zx9-speaker-banner{
     position: relative;
-
+    /*padding-top:calc(28%*1.7);*/
+    padding-top:47%;  /*!*Using padding to set height proportionally to the zx7 speakers*!*/
     background-color:#D87D4A;
     border-radius: 7px;
-    height:30rem;
+    /*height:30rem;*/
     background-image: url("../assets/home/desktop/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
     background-repeat: no-repeat,no-repeat;
     background-size: auto 80%,84%;
-    background-position: bottom -10%  left+15%, -100% 10%;
+    background-position: bottom -10%  left+15%, -100% 15%;
     /*!*background:rgb(216, 125, 74) url("../assets/home/desktop/pattern-circles.svg") no-repeat scroll -100% 10% / 84%;*!  code from https://a331998513.github.io/audiophile-ecommerce-website/#/*/
+    margin-bottom: 2rem;
 }
 
 
@@ -437,7 +439,7 @@ background-color: #191919;
     position: absolute;
     width: 20rem;
     right: 10%;
-    top:20%;
+    top:25%;
 
 
 }
@@ -454,7 +456,7 @@ background-color: #191919;
     color: #FFF;
     opacity: 75%;
     font-weight: 500;
-    font-size: 0.9375rem;
+    font-size:0.9375rem;
     line-height: 1.5625rem;
     margin-bottom: 2rem;
 }
@@ -462,8 +464,7 @@ background-color: #191919;
 .zx9-see-product-btn{
     background-color:#000;
     border: none;
-    padding: 0.7rem 1.2rem;
-    padding: 0.7rem 1.2rem;
+    padding: 1rem 2.4rem;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 0.8125rem;
@@ -472,11 +473,12 @@ background-color: #191919;
 
 @media (max-width: 1200px) {
     .zx9-speaker-banner{
-
+        padding-top:92.88824383%;
         background-image: url("../assets/home/tablet/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
-        background-size: auto 15rem,50rem;
-        background-position:  50% 1rem, 50% -16rem;
-        height: 40rem;
+        background-size: auto 40%,120%;
+        /*background-position:  50% 5%, 50% 300%;*/
+        background-position:  50% 15%, 50% 130%;
+        /*height: 40rem;*/
     }
 
 
@@ -486,33 +488,123 @@ background-color: #191919;
         left:0;
         right: 0;
         margin:0 auto;
-        bottom:5%;
+        bottom:10%;
         text-align: center;
     }
-    .zx9-see-product-btn{
-        padding: 1rem 2.4rem;
+
+}
+@media (max-width: 900px) {
+    .zx9-speaker-banner {
+
+        background-size: auto 35%,120%;
+        background-position:  50% 10%, 50% 130%;
+    }
+    .zx9-product-details-container{
+        bottom:5%;
+    }
+    .zx9-product-name{
+        margin-bottom: 1rem;
+    }
+    .zx9-product-description{
+
+        margin-bottom: 1rem;
     }
 }
+
 @media (max-width: 600px) {
     .zx9-speaker-banner{
 
         background-image: url("../assets/home/mobile/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
-        background-size: auto 10rem,40rem;
-        background-position:  50% 6rem, 50% -8.5rem;
-        height: 40rem;
+        background-size: auto 35%,172%;
+        background-position:  50% 12%, 50% -200%;
+        padding-top: 190%;
     }
 
+    .zx9-product-details-container{
+        bottom: 10%;
+    }
     .zx9-product-name{
+        line-height: 2.5rem;
         font-size: 2.25rem;
         width: 9rem;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 1.5rem;
     }
     .zx9-product-description{
         font-size: 0.9375rem;
         width: 17rem;
         margin-right: auto;
         margin-left: auto;
+        margin-bottom: 1.5rem;
     }
 
+}
+
+.see-product-btn-transparent{
+    background-color:transparent;
+    border: 2px #000 solid;
+    padding: 1rem 2.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 0.8125rem;
+    color: #000;
+}
+
+
+.zx7-speaker-banner{
+    position: relative;
+    height: 0;
+    width: 100%;
+    padding-top:28.828828828%; /*padding to set height to the div responsively (value is the aspect ratio expressed in %)*/
+    border-radius: 8px;
+    background-image: url("../assets/home/desktop/image-speaker-zx7.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: bottom right;
+}
+
+.zx7-product-details-container{
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left:10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.zx7-product-name{
+    font-weight: 700;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+    .zx7-speaker-banner{
+        width: 100%;
+        padding-top:46.444121915%;  /*!* CSS hack to set height based on width (aspect ratio -30% to prevent it from getting too tall)*!*/
+        background-size: contain;
+        background-position: bottom right;
+        background-image: url("../assets/home/tablet/image-speaker-zx7.jpg");
+    }
+}
+
+@media (max-width: 900px) {
+    .zx7-speaker-banner{
+        width: 100%;
+        padding-top:46.44%;  /*!*padding to set height to the div responsively (value is the aspect ratio expressed in %)*!*/
+        background-size: contain;
+        background-image: url("../assets/home/tablet/image-speaker-zx7.jpg");
+    }
+}
+
+@media (max-width: 600px) {
+    .zx7-speaker-banner{
+        width: 100%;
+        padding-top:97.859327217%;  /*!*padding to set height to the div responsively (value is the aspect ratio expressed in %)*!*/
+        background-size: contain;
+        background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
+    }
 }
