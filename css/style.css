@@ -617,6 +617,7 @@ background-color: #191919;
 
     display: grid;
     grid-template-columns: 49% 2% 49%;
+    margin-bottom: 10rem;
 
 
 }
@@ -662,20 +663,13 @@ display: flex;
     align-items: flex-start;
     border-radius: 8px;
 }
-
-
-
-
-
 @media (max-width: 1200px) {
     .yx1-see-product-background .zx7-product-name{
         margin-left: 10%;
-
     }
 
     .yx1-see-product-background .see-product-btn-transparent{
         margin-left: 10%;
-
     }
 }
 
@@ -701,6 +695,107 @@ display: flex;
 
     .yx1-see-product-background .see-product-btn-transparent{
         margin-left: 7%;
+
+    }
+}
+
+/*BRAND STATMENT / BRING YOUR BEST AUDIO GEAR SECTION*/
+
+.brand-statement-container{
+    display: flex;
+    align-items: center;
+    padding-bottom: 5rem;
+
+}
+
+.best-gear-picture{
+    height: auto;
+    flex-basis: 50%;
+}
+.best-gear-img {
+    border-radius: 10px;
+        width: 100%;
+}
+
+
+.brand-statement-text-section{
+    /*flex-basis: 100%;*/
+    flex-basis: 50%;
+}
+
+.brand-statement-heading
+{
+    color:#000;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.0892rem;
+    line-height: 2.75rem;
+    width:25rem;
+    padding-bottom: 2rem;
+}
+.best{
+    color:#D87D4A;
+}
+
+.brand-statement{
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color:#000;
+    opacity: 50%;
+    width: 28rem;
+}
+
+@media (max-width: 1200px) {
+
+    .brand-statement-container{
+
+        flex-flow:nowrap column-reverse;
+
+        /*justify-content: space-between;*/
+        /*align-items: center;*/
+
+    }
+
+    .best-gear-img {
+        flex-basis: 100%;
+        border-radius: 10px;
+        width: 100%;
+        max-height: 100%;
+        margin-bottom: 3rem;
+    }
+
+
+    .brand-statement-text-section{
+        /*flex-basis: 100%;*/
+        flex-basis:100%;
+    }
+
+    .brand-statement-heading
+    {
+        margin:0 auto;
+        width:32rem;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .brand-statement{
+       text-align: center;
+        width: unset;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .brand-statement-heading
+    {
+
+        width:unset;
+
+    }
+
+    .brand-statement {
+
 
     }
 }
