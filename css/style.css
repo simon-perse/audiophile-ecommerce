@@ -349,7 +349,7 @@ background-color: #191919;
     bottom: 0;
     background-color: #F1F1F1;
     z-index: -1;
-    border-radius: 7px;
+    border-radius: 8px;
 }
 
 .headphones-banner-img{
@@ -414,7 +414,7 @@ background-color: #191919;
     /*padding-top:calc(28%*1.7);*/
     padding-top:47%;  /*!*Using padding to set height proportionally to the zx7 speakers*!*/
     background-color:#D87D4A;
-    border-radius: 7px;
+    border-radius: 8px;
     /*height:30rem;*/
     background-image: url("../assets/home/desktop/image-speaker-zx9.png"), url("../assets/home/desktop/pattern-circles.svg");
     background-repeat: no-repeat,no-repeat;
@@ -541,6 +541,8 @@ background-color: #191919;
 
 }
 
+/*ZX7 EARPHONES SECTION*/
+
 .see-product-btn-transparent{
     background-color:transparent;
     border: 2px #000 solid;
@@ -562,6 +564,7 @@ background-color: #191919;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: bottom right;
+    margin-bottom: 2rem;
 }
 
 .zx7-product-details-container{
@@ -608,3 +611,97 @@ background-color: #191919;
         background-image: url("../assets/home/mobile/image-speaker-zx7.jpg");
     }
 }
+
+/*YX1 EARPHONES SECTION*/
+.xy1-product-container {
+
+    display: grid;
+    grid-template-columns: 49% 2% 49%;
+
+
+}
+
+.yx1-earphones-banner-picture{
+
+    height: auto;
+}
+.yx1-earphones-banner-img{
+    width: 100%;
+    border-radius: 8px;
+
+}
+
+.yx1-see-product-background{
+    background-color: #F1F1F1;
+    grid-column: 3/4;
+    width: 100%;
+
+}
+
+.yx1-see-product-section{
+    padding-left: 20%;
+    height: 100%;
+
+
+
+
+}
+.yx1-see-product-background .zx7-product-name{
+margin-left: 15%;
+
+}
+
+.yx1-see-product-background .see-product-btn-transparent{
+margin-left: 15%;
+
+}
+.yx1-see-product-background {
+display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 8px;
+}
+
+
+
+
+
+@media (max-width: 1200px) {
+    .yx1-see-product-background .zx7-product-name{
+        margin-left: 10%;
+
+    }
+
+    .yx1-see-product-background .see-product-btn-transparent{
+        margin-left: 10%;
+
+    }
+}
+
+@media (max-width: 600px) {
+    .xy1-product-container {
+        grid-template-columns: none;
+        grid-template-rows:49fr 2fr 49fr ;
+    }
+    .yx1-see-product-background{
+        width: 100%;
+        /*grid-row:2/3;*/
+        grid-column: unset;
+        grid-row:3/4 ;
+    }
+    .yx1-earphones-banner-picture{
+        width: 100%;
+    }
+
+    .yx1-see-product-background .zx7-product-name{
+        margin-left: 7%;
+
+    }
+
+    .yx1-see-product-background .see-product-btn-transparent{
+        margin-left: 7%;
+
+    }
+}
+
