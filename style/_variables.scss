@@ -1,0 +1,31 @@
+//assuming default browser settings
+@function pxToRem($value) {
+  $remValue: ($value / 16) + rem;
+  @return $remValue;
+}
+
+
+$dark_orange:#D87D4A;
+$light_orange:#fbaf85;
+$white:#FFF;
+$black:#000;
+
+$light_font_weight:400;
+$normal_font_weight:500;
+$bold_font_weight:700;
+
+$small_font_size:pxToRem(13);
+$normal_font_size:pxToRem(15);
+
+
+$h1_font_size:pxToRem(40);
+$h2_font_size:pxToRem(56);
+$h3_font_size:pxToRem(32);
+$h4_font_size:pxToRem(28);
+$h5_font_size:pxToRem(24);
+$h6_font_size:pxToRem(18);
+$body_font_siz:pxToRem(15);
+
+
+
+
