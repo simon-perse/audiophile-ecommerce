@@ -22,7 +22,10 @@ Users should be able to:
 
 ## Status
 The design for the home page is fully implemented. Currently integrating SASS and looking into restructuring my CSS to follow the BEM methodology.
+
 - Current progress: [Solution URL](https://compassionate-almeida-b44940.netlify.app/pages/index.html)
+
+
 
 ### Built with
 
